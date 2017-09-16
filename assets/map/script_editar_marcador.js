@@ -64,8 +64,9 @@ $(document).ready(function(){
 		  cancelButtonText: 'Cancelar',
 		  confirmButtonText: 'Si'
 		}).then(function () {
-		  	$.ajax({url: "api/api_eliminar_marcador.php?id_eliminar="+id_eliminar,
-	    		type: "GET",
+		  	$.ajax({url: "api/api_eliminar_marcador.php",
+	    		type: "POST",
+					data: "id_eliminar="+id_eliminar,
 	    		success: function(result){
 	    			if(result.status==200){
 	    				//HACER UN SWAL CON SE ELIMINO EL CONTENIDO Y ELIMINAR EL ELEMENTO DE LA TABLA!!
@@ -101,14 +102,14 @@ $(document).ready(function(){
 			console.log(id_editar, long_edit, lat_edit, tel_edit, nombre_edit);
 		}
 
-		$.ajax({url: 'api/api_editar_marcador.php?'+
-							'id_editar='+id_editar+'&'+
-							'nombre_edit='+nombre_edit+'&'+
-							'direcc_edit='+direcc_edit+'&'+
-							'lat_edit='+lat_edit+'&'+
-							'long_edit='+long_edit+'&'+
-							'tel_edit='+tel_edit,
-	    		type: "GET",
+		$.ajax({url: 'api/api_editar_marcador.php',
+	    		type: "POST",
+					data: 'id_editar='+id_editar+'&'+
+								'nombre_edit='+nombre_edit+'&'+
+								'direcc_edit='+direcc_edit+'&'+
+								'lat_edit='+lat_edit+'&'+
+								'long_edit='+long_edit+'&'+
+								'tel_edit='+tel_edit,
 	    		success: function(result){
 	    			if(result.status==200){
 	    				swal(

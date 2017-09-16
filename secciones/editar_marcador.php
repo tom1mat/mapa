@@ -4,7 +4,7 @@
             <div class="block-content">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div id="map"></div>    
+                        <div id="map"></div>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
         <thead>
             <tr role="row">
                 <th class="text-center" rowspan="1" colspan="1" style="width: 79px;">
-                    ID 
+                    ID
                 </th>
                 <th rowspan="1" colspan="1" style="width: 329px;">
                     Nombre
@@ -38,38 +38,25 @@
         </thead>
         <tbody>
         <?php
-            $marcadores = array();
-            require "config.php";
-
-            $conn = mysqli_connect($servername, $username, $password, $base);
-
-            if (!$conn) {
-              die("Connection failed: " . mysqli_connect_error());
-            }
-
-            $marcadores = array();
-
-            $respuesta = mysqli_query($conn, 'select * from marcador;');
-
-            while ($marcador = mysqli_fetch_assoc($respuesta)) {
-                $marcadores[] = $marcador;
-            }
-            foreach ($marcadores as $marcador) {
-                echo'
-                    <tr role="row" class="odd">
-                        <td class="text-center sorting_1">'.$marcador["id"].'</td>
-                        <td class="font-w600"><p class="editable">'.$marcador["nombre"].'</p></td>
-                        <td class="hidden-xs input_direccion"><p class="editable">'.$marcador["direccion"].'</p></td>
-                        <td class="hidden-xs"><p class="editable">'.$marcador["telefono"].'</p></td>
-                        <td class="latitud" style="display:none;">'.$marcador["latitud"].'</td>
-                        <td class="longitud" style="display:none;">'.$marcador["longitud"].'</td>
-                        <td class="text-center">
-                            <div class="btn-group">
-                                <button class="boton_edit btn btn-xs btn-default" type="button" value="'.$marcador["id"].'"><i class="fa fa-pencil"></i></button>
-                                <button class="boton_eliminar btn btn-xs btn-default" type="button" value="'.$marcador["id"].'"><i class="fa fa-times"></i></button>
-                            </div>
-                        </td>';
-            }
+        require "Marcadores.php";
+        $clase_marcadores = new Marcadores();
+        $marcadores = $clase_marcadores->getMarcadores();
+        foreach ($marcadores as $marcador) {
+            echo'
+                <tr role="row" class="odd">
+                    <td class="text-center sorting_1">'.$marcador["id"].'</td>
+                    <td class="font-w600"><p class="editable">'.$marcador["nombre"].'</p></td>
+                    <td class="hidden-xs input_direccion"><p class="editable">'.$marcador["direccion"].'</p></td>
+                    <td class="hidden-xs"><p class="editable">'.$marcador["telefono"].'</p></td>
+                    <td class="latitud" style="display:none;">'.$marcador["latitud"].'</td>
+                    <td class="longitud" style="display:none;">'.$marcador["longitud"].'</td>
+                    <td class="text-center">
+                        <div class="btn-group">
+                            <button class="boton_edit btn btn-xs btn-default" type="button" value="'.$marcador["id"].'"><i class="fa fa-pencil"></i></button>
+                            <button class="boton_eliminar btn btn-xs btn-default" type="button" value="'.$marcador["id"].'"><i class="fa fa-times"></i></button>
+                        </div>
+                    </td>';
+        }
         ?>
         </tbody>
         </table>

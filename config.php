@@ -1,5 +1,5 @@
-<?php 
-$servername = "localhost:3306";
-$username = "gruporod_gruporo";
-$password = "Gruporodriguez1";
-$base = "gruporod_grupo_rodriguez";
+<?php
+  /*$host = "localhost";
+  $dbname = "gruporod_grupo_rodriguez";
+  $user = "root";
+  $pass = "";

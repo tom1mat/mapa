@@ -37,7 +37,7 @@ $(document).ready(function(){
             lng: marcador.longitud
         });
 	});
-	
+
 });// End Onready function
 
 function getParameterByName(name, url) {

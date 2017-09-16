@@ -4,7 +4,7 @@
             <div class="block-content">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div id="map"></div>    
+                        <div id="map"></div>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
             <div class="form-group">
                 <div class="col-xs-12">
                     <div class="form-material form-material-success">
-                        <input class="form-control" type="text" id="register-username" name="nombre" placeholder="Ingresar nombre del marcador">
+                        <input required class="form-control" type="text" id="register-username" name="nombre" placeholder="Ingresar nombre del marcador">
                         <label for="register-username">Nombre</label>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                 <div class="col-xs-12">
                     <div class="form-material form-material-success">
                         <input class="form-control" type="text" id="direccion" name="direccion" placeholder="Presioná enter para ver la dirección en el mapa">
-                        <label for="register-username">Dirección</label>
+                        <label for="direccion">Dirección</label>
                     </div>
                 </div>
             </div>
@@ -40,13 +40,57 @@
                     <option value="proveedor">Proveedor</option>
                     <option value="cliente">Cliente</option>
                 </select>
-                <label for="material-select2">Tipo</label>
+                <label for="tipo">Tipo</label>
+                <br>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <div class="form-material form-material-success">
+                        <input class="form-control" type="text" id="mail" name="mail" placeholder="Ingresar mail">
+                        <label for="mail">Mail</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <div class="form-material form-material-success">
+                        <input class="form-control" type="text" id="nombre_contacto" name="nombre_contacto" placeholder="Ingresar el nombre de la persona de contacto">
+                        <label for="nombre_contacto">Nombre contacto</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <div class="form-material form-material-success">
+                        <input class="form-control" type="text" id="cuit" name="cuit" placeholder="Ingresar el CUIT">
+                        <label for="cuit">CUIT</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-material floating open">
+                <select class="form-control" id="condicion_afip" name="condicion_afip" size="1">
+                    <option disabled selected value> -Seleccionar tipo- </option>
+                    <option value="consumidor_final">Consumidor Final</option>
+                    <option value="excento">Excento</option>
+                    <option value="responsable_inscripto">Responsable Inscripto</option>
+                    <option value="responsable_monotributo">Responsable Monotributo</option>
+                </select>
+                <label for="condicion_afip">Condición AFIP</label>
+                <br>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <div class="form-material form-material-success">
+                        <input class="form-control" type="text" id="actividad_comercial" name="actividad_comercial" placeholder="Ingresar la actividad comercial">
+                        <label for="actividad_comercial">Actividad comercial</label>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <div class="col-xs-12">
                     <div class="form-material form-material-success">
                         <input class="form-control" type="text" id="telefono" name="telefono" placeholder="Ingresar teléfono">
-                        <label for="register-username">Teléfono</label>
+                        <label for="telefono">Teléfono</label>
                     </div>
                 </div>
             </div>

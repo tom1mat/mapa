@@ -86,6 +86,9 @@
                                         </li> -->
                                     </ul>
                                 </li>
+                                <li>
+                                    <a href="index.php?seccion=gestionar_marcadores"><i class="glyphicon glyphicon-cog"></i><span class="sidebar-mini-hide">Gestionar Marcadores</span></a>
+                                </li>
                             </ul>
                         </div>
                         <!-- END Side Content -->
@@ -134,7 +137,7 @@
                     </div>
                 </div>
                 <section class="content content-boxed">
-                    <?php 
+                    <?php
                     if(isset($_GET["seccion"])){
                         $seccion = $_GET["seccion"];
 

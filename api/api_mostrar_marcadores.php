@@ -1,19 +1,18 @@
 <?php
 	header("Content-Type: application/json; charset=UTF-8");
-	require "../config.php";
+	require "../Marcadores.php";
+	$clase_marcadores = new Marcadores();
+	if(isset($_GET["id_marcador"])){
+		$id = $_GET["id_marcador"];
 
-	$conn = mysqli_connect($servername, $username, $password, $base);
+		if($marcadores = $clase_marcadores->getMarcadores($id))
+		echo json_encode(["status"=>200,"data"=>$marcadores]);
+		else
+		echo json_encode(["status"=>400]);
 
-	if (!$conn) {
-	  die("Connection failed: " . mysqli_connect_error());
+	}else{
+		if($marcadores = $clase_marcadores->getMarcadores())
+		echo json_encode(["status"=>200,"data"=>$marcadores]);
+		else
+		echo json_encode(["status"=>400]);
 	}
-
-	$marcadores = array();
-
-	$respuesta = mysqli_query($conn, 'select * from marcador;');
-
-	while ($marcador = mysqli_fetch_assoc($respuesta)) {
-		$marcadores[] = $marcador;
-	}
-
-	echo json_encode(["status"=>200,"data"=>$marcadores]);

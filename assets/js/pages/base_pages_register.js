@@ -40,7 +40,7 @@ var BasePagesRegister = function() {
                 },
                 'register-terms': {
                     required: true
-                }
+                },
             },
             messages: {
                 'register-username': {
@@ -57,7 +57,7 @@ var BasePagesRegister = function() {
                     minlength: 'Your password must be at least 5 characters long',
                     equalTo: 'Please enter the same password as above'
                 },
-                'register-terms': 'You must agree to the service terms!'
+                'register-terms': 'You must agree to the service terms!',
             }
         });
     };

@@ -1,20 +1,13 @@
 <?php
-	if(isset($_GET["id_eliminar"])){
-		$id_eliminar = $_GET["id_eliminar"];
-		header("Content-Type: application/json; charset=UTF-8");
-		require "../config.php";
+	header("Content-Type: application/json; charset=UTF-8");
+	if(isset($_POST["id_eliminar"])){
+		$id_eliminar = $_POST["id_eliminar"];
 
-		$conn = mysqli_connect($servername, $username, $password, $base);
+		require "../Marcadores.php";
+		$clase_marcadores = new Marcadores();
 
-		if (!$conn) {
-		  die("Connection failed: " . mysqli_connect_error());
-		}
-		
-		$respuesta = mysqli_query($conn, 'delete from marcador where id='.$id_eliminar.';');
-
-		if($respuesta)
+		if($clase_marcadores->deleteMarcador($id_eliminar))
 			echo json_encode(["status"=>200]);
 		else
 			echo json_encode(["status"=>400]);
 	}
-
