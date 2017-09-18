@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(!isset($_SESSION)){
+    Header("Location:index.html");
+  }
+?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="en"> <!--<![endif]-->
@@ -62,16 +68,16 @@
                         <div class="side-content side-content-full">
                             <ul class="nav-main">
                                 <li>
-                                    <a href="index.php?seccion=mapa"><i class="icon-map"></i><span class="sidebar-mini-hide">Mapa</span></a>
+                                    <a href="index_mapa.php?seccion=mapa"><i class="icon-map"></i><span class="sidebar-mini-hide">Mapa</span></a>
                                 </li>
                                 <li class="open">
                                 <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="glyphicon glyphicon-map-marker"></i><span class="sidebar-mini-hide">Marcadores</span></a>
                                     <ul>
                                         <li>
-                                            <a href="index.php?seccion=ingresar_marcador">Ingresar marcador</a>
+                                            <a href="index_mapa.php?seccion=ingresar_marcador">Ingresar marcador</a>
                                         </li>
                                         <li>
-                                            <a href="index.php?seccion=editar_marcador">Ver/Editar marcadores</a>
+                                            <a href="index_mapa.php?seccion=editar_marcador">Ver/Editar marcadores</a>
                                         </li>
                                         <!--<li>
                                             <a class="nav-submenu" data-toggle="nav-submenu" href="#">Sub Level 2</a>
@@ -87,7 +93,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="index.php?seccion=gestionar_marcadores"><i class="glyphicon glyphicon-cog"></i><span class="sidebar-mini-hide">Gestionar Marcadores</span></a>
+                                    <a href="index_mapa.php?seccion=gestionar_marcadores"><i class="glyphicon glyphicon-cog"></i><span class="sidebar-mini-hide">Gestionar Marcadores</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -105,7 +111,7 @@
                     <!-- Header Navigation Left -->
                     <ul class="nav-header pull-left">
                         <li class="header-content">
-                            <a class="h5" href="index.html">
+                            <a class="h5" href="index_mapa.html">
                                 <i class="fa fa-circle-o-notch text-primary"></i> <span class="h4 font-w600 text-white">ne</span>
                             </a>
                         </li>

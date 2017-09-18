@@ -18,7 +18,15 @@ $(document).ready(function(){
   //BOTON ABRIR MODAL E INICIALIZACION DEL MAPA
   $(".bot_modal").click(function(event) {
     current = event.target.id;
+    console.log(origen);
     console.log(current);
+    //Si el origen o el destino es nulo (no se lo inicializo), desactivo el boton para ingresar el mrkr
+    if (typeof(origen) == "undefined" && current == "bot_origen"){
+      $("#bot_ingresar_marcador").prop('disabled', true);
+    }
+    else if (typeof(destino) == "undefined" && current == "bot_destino"){
+      $("#bot_ingresar_marcador").prop('disabled', true);
+    }
     if (current == "bot_origen")
       $('#titulo_mapa').html('ORIGEN');
     else if (current == "bot_destino")
@@ -74,19 +82,27 @@ $(document).ready(function(){
       }
       //EVENTO CLICK PARA INGRESAR MARCADOR
       GMaps.on('click', mapa.map, function(event) {
+        $("#bot_ingresar_marcador").prop('disabled', false);
         mapa.removeMarkers();
         var lat = event.latLng.lat();
         var lng = event.latLng.lng();
         var marcador = {
             latitud: lat,
             longitud: lng,
-            nombre: "Marcador no ingresado."
+            nombre: "Cliente/proveedor no ingresado."
         }
-        if(current == "bot_origen")
+        if(current == "bot_origen"){
           origen = marcador;
-        else
+          $('#h1-origen').fadeOut(500, function() {
+              $(this).text(marcador.nombre).fadeIn(500);
+          });
+        }
+        else{
           destino = marcador;
-
+          $('#h1-destino').fadeOut(500, function() {
+              $(this).text(marcador.nombre).fadeIn(500);
+          });
+        }
         mapa.addMarker({
           lat: lat,
           lng: lng,
@@ -102,6 +118,7 @@ $(document).ready(function(){
               address: $('#direccion').val(),
               callback: function(results, status) {
                   if (status == 'OK') {
+                    $("#bot_ingresar_marcador").prop('disabled', false);
                        var latlng = results[0].geometry.location;
                        latitud = latlng.lat();
                        longitud = latlng.lng();
@@ -117,15 +134,30 @@ $(document).ready(function(){
       }
     });
 
+    $("#bot_ingresar_marcador").click(function(event) {
+
+    });
+
   //Evento: cada vez que se cambia el select del ORIGEN
   $( "#origen" ).change(function() {
     id = $('#origen').find(":selected").val();
     origen = buscarItem(marcadores, id);
+    mrkr = $('#origen').find(":selected").text();
+    //Cambio el titulo del H1 del origen con una animacion
+    $('#h1-origen').fadeOut(500, function() {
+        $(this).text(mrkr).fadeIn(500);
+    });
   });
   //Evento: cada vez que se cambia el select del DESTINO
   $( "#destino" ).change(function() {
+
     id = $('#destino').find(":selected").val();
     destino = buscarItem(marcadores, id);
+    mrkr = $('#destino').find(":selected").text();
+    //Cambio el titulo del H1 del destino con una animacion
+    $('#h1-destino').fadeOut(500, function() {
+        $(this).text(mrkr).fadeIn(500);
+    });
   });
 
 });// End Onready function

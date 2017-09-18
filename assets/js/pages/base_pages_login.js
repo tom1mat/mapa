@@ -33,12 +33,12 @@ var BasePagesLogin = function() {
             },
             messages: {
                 'login-username': {
-                    required: 'Please enter a username',
-                    minlength: 'Your username must consist of at least 3 characters'
+                    required: 'Por favor ingresá un usuario',
+                    minlength: 'El usuario debe tener como mínimo 3 dígitos'
                 },
                 'login-password': {
-                    required: 'Please provide a password',
-                    minlength: 'Your password must be at least 5 characters long'
+                    required: 'Por favor ingresá una contraseña',
+                    minlength: 'La contraseña debe tener como mínimo 5 dígitos'
                 }
             }
         });

@@ -22,7 +22,9 @@
   </div>
   <!-- END ORIGEN -->
   <div class="col-sm-1">
-    <button id="bot_origen" class="btn btn-info bot_modal" type="button">Buscar en el mapa</button>
+    <button id="bot_origen" class="btn btn-info bot_modal" type="button">
+      Buscar <span>origen</span> en mapa
+    </button>
   </div>
 </div>
 <!-- END ROW -->
@@ -44,10 +46,24 @@
   </div>
   <!-- END DESTINO -->
   <div class="col-sm-1">
-    <button id="bot_destino" class="btn btn-info bot_modal" type="button">Buscar en el mapa</button>
+    <button id="bot_destino" class="btn btn-info bot_modal" type="button">
+      Buscar <span>destino</span> en mapa
+    </button>
   </div>
 </div>
 <!-- END ROW -->
+
+<div class="row">
+  <div class="col-sm-6">
+    <h3 id="h1-origen">Origen</h1>
+  </div>
+  <div class="col-sm-6">
+    <h3 id="h1-destino">Destino</h1>
+  </div>
+</div>
+<div class="row">
+
+</div>
 
 <!-- MODAL MAP -->
 <div class="modal fade" id="modal_mapa" tabindex="-1" role="dialog" aria-hidden="true">
@@ -82,10 +98,12 @@
                           </div>
                       </div>
                   </div>
+                  <button id="bot_ingresar_marcador" class="btn btn-sm btn-primary pull-right" type="button" data-dismiss="modal"><i class="fa fa-check"></i>Ingresar marcador</button>
+                  <br>
                   <br>
                   <!-- END MAPA -->
-
                 </div>
+
             </div>
 
         </div>
