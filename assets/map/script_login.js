@@ -10,7 +10,7 @@ $(document).ready(function(){
 	    		success: function(result){
 	    			if(result.status==200){
               var ruta = window.location.href;
-              if (ruta.substr(ruta.length - 1) == "l"){
+              if (ruta.substr(ruta.length - 1) == "p"){
                 console.log(ruta.replace("index_mapa.html", "index_mapa.php"));
                 window.location.replace(ruta.replace("index_mapa.html", "index_mapa.php"));
               }else{

@@ -5,6 +5,7 @@ if(isset($_POST["usuario"]) && isset($_POST["pass"])){
   $pass_login = $_POST["pass"];
 
   require "../DBconnection.php";
+  //"localhost", "gruporod_grupo_rodriguez","gruporod_global","Gruporodriguez123"
   DBconnection::setData("localhost", "gruporod_grupo_rodriguez","root","");
   $db = DBconnection::getConnection();
 

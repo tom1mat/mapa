@@ -4,6 +4,8 @@ $(document).ready(function(){
   var marcadores = [];
   var origen;
   var destino;
+  var nuevo_origen;
+  var nuevo_destino;
 
   //AJAX, OBTENER MARCADORES
   $.ajax({url: "api/api_mostrar_marcadores.php",
@@ -16,9 +18,8 @@ $(document).ready(function(){
   }});
 
   //BOTON ABRIR MODAL E INICIALIZACION DEL MAPA
-  $(".bot_modal").click(function(event) {
+  $(document).on('click','.bot_modal',function(event){
     current = event.target.id;
-    console.log(origen);
     console.log(current);
     //Si el origen o el destino es nulo (no se lo inicializo), desactivo el boton para ingresar el mrkr
     if (typeof(origen) == "undefined" && current == "bot_origen"){
@@ -35,34 +36,13 @@ $(document).ready(function(){
     $('#modal_mapa').modal('show');
   });
   $('#modal_mapa').on('shown.bs.modal', function (e) {
-    if(typeof(mapa) != "undefined"){
-      //Si tengo el origen o el destino seleccionado del SELECT, lo muestro
-      if (current == "bot_origen" && typeof(origen) != "undefined"){
-        console.log(origen);
-        mapa.addMarker({
-          lat: origen.latitud,
-          lng: origen.latitud,
-          title: origen.nombre
-        });
-        mapa.setCenter(origen.latitud, origen.longitud);
-      }else if (current == "bot_destino" && typeof(destino) != "undefined"){
-        console.log(destino);
-        mapa.addMarker({
-          lat: destino.latitud,
-          lng: destino.latitud,
-          title: destino.nombre
-        });
-        mapa.setCenter(destino.latitud, destino.longitud);
-      }
-    }
-    //SI EL MAPA NO ESTA CREADO, LO CREO
-    if(typeof(mapa) == "undefined"){
       mapa = new GMaps({
         div: '#map',
         lat: -34.608322,
         lng: -58.439440,
         zoom: 11
       });
+      //Si tengo el origen o el destino seleccionado del SELECT, lo muestro
       if (current == "bot_origen" && typeof(origen) != "undefined"){
         console.log(origen);
         mapa.addMarker({
@@ -89,26 +69,20 @@ $(document).ready(function(){
         var marcador = {
             latitud: lat,
             longitud: lng,
-            nombre: "Cliente/proveedor no ingresado."
+            nombre: "Cliente/proveedor no ingresado"
         }
         if(current == "bot_origen"){
-          origen = marcador;
-          $('#h1-origen').fadeOut(500, function() {
-              $(this).text(marcador.nombre).fadeIn(500);
-          });
+          nuevo_origen = marcador;
         }
         else{
-          destino = marcador;
-          $('#h1-destino').fadeOut(500, function() {
-              $(this).text(marcador.nombre).fadeIn(500);
-          });
+          nuevo_destino = marcador;
         }
         mapa.addMarker({
           lat: lat,
           lng: lng,
         });
       });
-    }
+
   });
 
   //INGRESAR DIRECCION EN EL MODAL
@@ -133,10 +107,66 @@ $(document).ready(function(){
            });
       }
     });
-
+    //AGREGAR EL MARCADOR CON EL BOTON Ingresar marcador
     $("#bot_ingresar_marcador").click(function(event) {
-
+       if(current == "bot_origen"){
+          origen = nuevo_origen;
+          $('#h1-origen').fadeOut(500, function() {
+              $(this).text(origen.nombre).fadeIn(500);
+          });
+          if(typeof(destino) != "undefined")
+            $('#bot_calcular').prop('disabled', false);
+        }
+        else{
+          destino = nuevo_destino;
+          $('#h1-destino').fadeOut(500, function() {
+              $(this).text(destino.nombre).fadeIn(500);
+          });
+          if(typeof(origen) != "undefined")
+            $('#bot_calcular').prop('disabled', false);
+        }
     });
+
+    //CALCULAR DISTANCIA
+     $("#bot_calcular").click(function(event) {
+        if(typeof(origen) != "undefined" && typeof(destino) != "undefined" && typeof(mapa) == "undefined"){
+            mapa = new GMaps({
+            div: '#map',
+            lat: origen.latitud,
+            lng: origen.longitud,
+            zoom: 11
+          });
+        }
+    	mapa.getRoutes({
+    		origin: [origen.latitud, origen.longitud],
+    		travelMode: 'driving',
+    		destination: [destino.latitud, destino.longitud],
+    		callback: function (e) {
+    			var time = 0;
+    			var distance = 0;
+    			for (var i=0; i<e[0].legs.length; i++) {
+    				time += e[0].legs[i].duration.value;
+    				distance += e[0].legs[i].distance.value;
+    			}
+    			distance = distance /1000;
+    			time = time /60;
+
+          $('#h3-tit-tiempo').fadeOut(500, function() {
+              $(this).text("Tiempo").fadeIn(500);
+          });
+          $('#h3-tit-distancia').fadeOut(500, function() {
+              $(this).text("Distancia").fadeIn(500);
+          });
+    			$('#h4-distancia').fadeOut(500, function() {
+              $(this).text(distance+" Km").fadeIn(500);
+          });
+          $('#h4-tiempo').fadeOut(500, function() {
+              $(this).text(time+" minutos").fadeIn(500);
+          });
+    		}
+    	});
+    });
+
 
   //Evento: cada vez que se cambia el select del ORIGEN
   $( "#origen" ).change(function() {
@@ -147,10 +177,12 @@ $(document).ready(function(){
     $('#h1-origen').fadeOut(500, function() {
         $(this).text(mrkr).fadeIn(500);
     });
+    //Si el destino no es null, activo el boton para calcular
+    if(typeof(destino) != "undefined")
+      $('#bot_calcular').prop('disabled', false);
   });
   //Evento: cada vez que se cambia el select del DESTINO
   $( "#destino" ).change(function() {
-
     id = $('#destino').find(":selected").val();
     destino = buscarItem(marcadores, id);
     mrkr = $('#destino').find(":selected").text();
@@ -158,6 +190,9 @@ $(document).ready(function(){
     $('#h1-destino').fadeOut(500, function() {
         $(this).text(mrkr).fadeIn(500);
     });
+    //Si el origen no es null, activo el boton para calcular
+    if(typeof(origen) != "undefined")
+      $('#bot_calcular').prop('disabled', false);
   });
 
 });// End Onready function

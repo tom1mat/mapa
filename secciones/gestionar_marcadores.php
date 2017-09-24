@@ -23,7 +23,7 @@
   <!-- END ORIGEN -->
   <div class="col-sm-1">
     <button id="bot_origen" class="btn btn-info bot_modal" type="button">
-      Buscar <span>origen</span> en mapa
+      Buscar origen en mapa
     </button>
   </div>
 </div>
@@ -47,7 +47,7 @@
   <!-- END DESTINO -->
   <div class="col-sm-1">
     <button id="bot_destino" class="btn btn-info bot_modal" type="button">
-      Buscar <span>destino</span> en mapa
+      Buscar destino en mapa
     </button>
   </div>
 </div>
@@ -55,14 +55,43 @@
 
 <div class="row">
   <div class="col-sm-6">
-    <h3 id="h1-origen">Origen</h1>
+    <h3>Origen</h3>
   </div>
   <div class="col-sm-6">
-    <h3 id="h1-destino">Destino</h1>
+    <h3>Destino</h3>
   </div>
 </div>
 <div class="row">
-
+  <div class="col-sm-6">
+    <h4 id="h1-origen">Seleccionar marcador...</h4>
+  </div>
+  <div class="col-sm-6">
+    <h4 id="h1-destino">Seleccionar marcador...</h4>
+  </div>
+</div>
+<br>
+<div class="row" style="margin: auto;">
+    <button disabled id="bot_calcular" class="btn btn-success" type="button">
+      Calcular
+    </button>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-12">
+        <h3 id="h3-tit-distancia"></h3>
+     </div>
+     <div class="col-sm-12">
+        <h4 id="h4-distancia"></h4>
+     </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-12">
+        <h3 id="h3-tit-tiempo"></h3>
+     </div>
+     <div class="col-sm-12">
+        <h4 id="h4-tiempo"></h4>
+     </div>
 </div>
 
 <!-- MODAL MAP -->

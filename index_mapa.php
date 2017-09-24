@@ -1,7 +1,18 @@
 <?php
   session_start();
-  if(!isset($_SESSION)){
-    Header("Location:index.html");
+   if(isset($_GET["seccion"])){
+     
+   if($_GET["seccion"] == "logout"){
+    Header("Location:secciones/logout.php");
+    die();
+    }
+  }
+  if(isset($_SESSION)){
+      
+      if(!$_SESSION["sesion_gruporod"] == "gruporod"){
+        
+        Header("Location:index.php");
+      }
   }
 ?>
 <!DOCTYPE html>
@@ -95,6 +106,9 @@
                                 <li>
                                     <a href="index_mapa.php?seccion=gestionar_marcadores"><i class="glyphicon glyphicon-cog"></i><span class="sidebar-mini-hide">Gestionar Marcadores</span></a>
                                 </li>
+                                <li>
+                                    <a href="index_mapa.php?seccion=logout"><i class="glyphicon glyphicon-off"></i><span class="sidebar-mini-hide">Salir</span></a>
+                                </li>
                             </ul>
                         </div>
                         <!-- END Side Content -->
@@ -146,7 +160,6 @@
                     <?php
                     if(isset($_GET["seccion"])){
                         $seccion = $_GET["seccion"];
-
                         include "secciones/".$seccion.".php";
                     }
                     ?>

@@ -7,6 +7,7 @@ class Marcadores
 
     function __construct()
     {
+        //"localhost", "gruporod_grupo_rodriguez","gruporod_global","Gruporodriguez123"
         DBconnection::setData("localhost", "gruporod_grupo_rodriguez","root","");
         $this->db = DBconnection::getConnection();
     }

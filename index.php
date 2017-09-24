@@ -1,10 +1,20 @@
+<?php
+    session_start();
+    if(isset($_SESSION)){
+      if(isset($_SESSION["sesion_gruporod"]))
+
+        Header("Location:index_mapa.php");
+
+    }
+?>
+
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="en"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
 
-        <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
+
+        <title>Grupo Rodriguez</title>
 
         <meta name="robots" content="noindex, nofollow">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
@@ -58,7 +68,7 @@
                                         <button class="btn btn-sm btn-block btn-primary" type="submit">Log in</button>
                                     </div>
                                 </div>
-                                <p id="error" style="color:red"></p>
+                                <p style="color:red"><i id="error"></i></p>
                             </form>
                             <!-- END Login Form -->
                         </div>
