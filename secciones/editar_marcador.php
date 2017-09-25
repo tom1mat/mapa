@@ -1,72 +1,121 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="block block-rounded">
-            <div class="block-content">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div id="map"></div>
-                    </div>
+ <?php
+  require "Marcadores.php";
+
+  $clase_marcadores = new Marcadores();
+
+  $marcadores = $clase_marcadores->getMarcadores();
+
+?>
+<div class="row">    
+    <div class="col-sm-12">
+          <div class="form-material">
+              <select class="form-control" id="marcadores" name="origen" size="1">
+                  <option disabled selected value> -Seleccionar marcador- </option>
+                  <?php
+                    foreach ($marcadores as $marcador) {
+                      echo "<option value='$marcador[id]'>$marcador[nombre]</option>";
+                    }
+                  ?>
+              </select>
+              <label for="marcadores">Marcadores</label>
+          </div>
+    </div>
+</div>
+ <form class="js-validation-register form-horizontal push-50-t push-50" id="form_editar_marcador" action="" method="post">
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <div class="col-xs-6">
+                <div class="form-material form-material-success">
+                    <input required class="form-control" type="text" id="register-username" name="nombre" placeholder="Ingresar nombre del marcador">
+                    <label for="register-username">Nombre</label>
+                </div>
+            </div>
+
+
+            <div class="col-xs-6">
+                <div class="form-material form-material-success">
+                    <input class="form-control" type="text" id="direccion" name="direccion" placeholder="Presioná enter para ver la dirección en el mapa">
+                    <label for="direccion">Dirección</label>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="block">
-    <div class="block-header">
-        <h3 class="block-title">Marcadores</h3>
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <div class="col-xs-6">
+                <div class="form-material floating open">
+                    <select required class="form-control" id="tipo" name="tipo" size="1">
+                        <option disabled selected value> -Seleccionar tipo- </option>
+                        <option value="proveedor">Proveedor</option>
+                        <option value="cliente">Cliente</option>
+                    </select>
+                    <label for="tipo">Tipo</label>
+                    <br>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-material form-material-success">
+                    <input class="form-control" type="text" id="mail" name="mail" placeholder="Ingresar mail">
+                    <label for="mail">Mail</label>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="block-content">
-        <table class="table table-bordered table-striped js-dataTable-full-pagination dataTable no-footer" id="DataTables_Table_2" role="grid" aria-describedby="DataTables_Table_2_info">
-        <thead>
-            <tr role="row">
-                <th class="text-center" rowspan="1" colspan="1" style="width: 79px;">
-                    ID
-                </th>
-                <th rowspan="1" colspan="1" style="width: 329px;">
-                    Nombre
-                </th>
-                <th rowspan="1" colspan="1"style="width: 469px;">
-                    Dirección
-                </th>
-                <th rowspan="1" colspan="1">
-                    Teléfono
-                </th>
-                <th style="width: 113px;" rowspan="1" colspan="1">
-                    Acciones
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php
-        require "Marcadores.php";
-        $clase_marcadores = new Marcadores();
-        $marcadores = $clase_marcadores->getMarcadores();
-        foreach ($marcadores as $marcador) {
-            echo'
-                <tr role="row" class="odd">
-                    <td class="text-center sorting_1">'.$marcador["id"].'</td>
-                    <td class="font-w600"><p class="editable">'.$marcador["nombre"].'</p></td>
-                    <td class="hidden-xs input_direccion"><p class="editable">'.$marcador["direccion"].'</p></td>
-                    <td class="hidden-xs"><p class="editable">'.$marcador["telefono"].'</p></td>
-                    <td class="latitud" style="display:none;">'.$marcador["latitud"].'</td>
-                    <td class="longitud" style="display:none;">'.$marcador["longitud"].'</td>
-                    <td class="text-center">
-                        <div class="btn-group">
-                            <button class="boton_edit btn btn-xs btn-default" type="button" value="'.$marcador["id"].'"><i class="fa fa-pencil"></i></button>
-                            <button class="boton_eliminar btn btn-xs btn-default" type="button" value="'.$marcador["id"].'"><i class="fa fa-times"></i></button>
-                        </div>
-                    </td>';
-        }
-        ?>
-        </tbody>
-        </table>
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <div class="col-xs-6">
+                <div class="form-material form-material-success">
+                    <input class="form-control" type="text" id="cuit" name="cuit" placeholder="Ingresar el CUIT">
+                    <label for="cuit">CUIT</label>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-material floating open">
+                    <select class="form-control" id="condicion_afip" name="condicion_afip" size="1">
+                        <option disabled selected value> -Seleccionar tipo- </option>
+                        <option value="consumidor_final">Consumidor Final</option>
+                        <option value="excento">Excento</option>
+                        <option value="responsable_inscripto">Responsable Inscripto</option>
+                        <option value="responsable_monotributo">Responsable Monotributo</option>
+                    </select>
+                    <label for="condicion_afip">Condición AFIP</label>
+                    <br>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<!-- Api Google maps -->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBQFz2bfjb3GvN-06VULQEaUq8ci2QH5bE"></script>
-<!-- Mapa -->
-<script src="assets/map/gmaps.js"></script>
-<script src="assets/map/script_mapa.js"></script>
-<!-- Javascript propio -->
+    <div class="row">
+        <div class="form-group col-xs-12">
+           <div class="col-xs-6">
+                <div class="form-material form-material-success">
+                    <input class="form-control" type="text" id="nombre_contacto" name="nombre_contacto" placeholder="Ingresar el nombre de la persona de contacto">
+                    <label for="nombre_contacto">Nombre contacto</label>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-material form-material-success">
+                    <input class="form-control" type="text" id="actividad_comercial" name="actividad_comercial" placeholder="Ingresar la actividad comercial">
+                    <label for="actividad_comercial">Actividad comercial</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <div class="col-xs-6">
+                <div class="form-material form-material-success">
+                    <input class="form-control" type="text" id="telefono" name="telefono" placeholder="Ingresar teléfono">
+                    <label for="telefono">Teléfono</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12 col-sm-6 col-md-5">
+            <button class="btn btn-block btn-success" type="submit" id="bot_submit"><i class="fa fa-plus pull-right"></i> Editar marcador</button>
+        </div>
+    </div>
+    <input type="hidden" id="latitud" name="latitud" value="0">
+    <input type="hidden" id="longitud" name="longitud" value="0">
+</form>
 <script src="assets/map/script_editar_marcador.js"></script>
