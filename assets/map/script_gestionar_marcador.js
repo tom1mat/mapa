@@ -69,7 +69,7 @@ $(document).ready(function(){
         var marcador = {
             latitud: lat,
             longitud: lng,
-            nombre: "Cliente/proveedor no ingresado"
+            nombre: "Direccion seleccionada"
         }
         if(current == "bot_origen"){
           nuevo_origen = marcador;
@@ -102,6 +102,15 @@ $(document).ready(function(){
                           lat: latlng.lat(),
                           lng: latlng.lng()
                       });
+                     var marcador = {
+                        latitud: latlng.lat(),
+                        longitud: latlng.lng(),
+                        nombre: $('#direccion').val()
+                    }
+                    if(current == "bot_origen")
+                      nuevo_origen = marcador;
+                    else
+                      nuevo_destino = marcador;
                }
            }
            });
@@ -129,6 +138,7 @@ $(document).ready(function(){
 
     //CALCULAR DISTANCIA
      $("#bot_calcular").click(function(event) {
+         $('#bot_calcular').prop('disabled', true);
         if(typeof(origen) != "undefined" && typeof(destino) != "undefined" && typeof(mapa) == "undefined"){
             mapa = new GMaps({
             div: '#map',
@@ -163,6 +173,7 @@ $(document).ready(function(){
           $('#h4-tiempo').fadeOut(500, function() {
               $(this).text(time+" minutos").fadeIn(500);
           });
+          $('#bot_calcular').prop('disabled', false);
     		}
     	});
     });

@@ -70,7 +70,7 @@
                             <select class="form-control" id="condicion_afip" name="condicion_afip" size="1">
                                 <option disabled selected value> -Seleccionar tipo- </option>
                                 <option value="consumidor_final">Consumidor Final</option>
-                                <option value="excento">Excento</option>
+                                <option value="excento">Exento</option>
                                 <option value="responsable_inscripto">Responsable Inscripto</option>
                                 <option value="responsable_monotributo">Responsable Monotributo</option>
                             </select>
