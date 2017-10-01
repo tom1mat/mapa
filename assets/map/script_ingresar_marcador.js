@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    var ingresar_direccion = false;
     mapa = new GMaps({
        div: '#map',
        lat: -34.608322,
@@ -30,4 +31,56 @@ $(document).ready(function(){
              });
         }
       });
+     $("#form_ingresar").submit(function(event) {
+        event.preventDefault();
+        if ($("#register-username").val() == ""){
+            swal(
+              '',
+              'Ingrese un nombre',
+              'warning'
+            );
+            return;
+        }
+        if ($("#tipo option:selected").val() != "proveedor" && $("#tipo option:selected").val() != "cliente"){
+            swal(
+              '',
+              'Seleccione el tipo',
+              'warning'
+            );
+            return;
+        }
+        //AJAX, OBTENER MARCADORES
+        var datos;
+        datos = {
+            nombre: $("#register-username").val(),
+            direccion: $("#direccion").val(),
+            tipo: $("#tipo").val(),
+            mail: $("#mail").val(),
+            cuit: $("#cuit").val(),
+            condicion_afip: $("#condicion_afip").val(),
+            nombre_contacto: $("#nombre_contacto").val(),
+            actividad_comercial: $("#actividad_comercial").val(),
+            telefono: $("#telefono").val(),
+            latitud: $("#latitud").val(),
+            longitud: $("#longitud").val()
+        }
+        $.ajax({url: "api/api_insertar_marcador.php",
+            type: "POST",
+            data: datos,
+            success: function(result){
+              if(result.status == 200){
+                    swal(
+                  '',
+                  'Marcador ingresado',
+                  'success'
+                );
+              }else if(result.status == 400){
+                swal(
+                  'Error',
+                  'No se pudo editar el marcador',
+                  'error'
+                );
+              }
+        }});
+    });
 });// End Onready function

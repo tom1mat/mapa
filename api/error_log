@@ -1,0 +1,150 @@
+[25-Sep-2017 15:39:22 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:39:24 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:39:26 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:39:31 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:39:35 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:39:35 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:39:35 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:39:36 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:39:36 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:39:40 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:21 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:24 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:27 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:27 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:28 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:28 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:28 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:32 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:32 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:32 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:33 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:40:33 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:01 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:04 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:05 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:06 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:06 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:06 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:07 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:07 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:07 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:07 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:07 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:07 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 15:41:08 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/api/api_validar_login.php on line 13
+[25-Sep-2017 16:17:04 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/Marcadores.php:19
+Stack trace:
+#0 /home/gruporodriguez/public_html/mapa/api/api_mostrar_marcadores.php(14): Marcadores->getMarcadores()
+#1 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/Marcadores.php on line 19
+[25-Sep-2017 16:17:11 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/Marcadores.php:19
+Stack trace:
+#0 /home/gruporodriguez/public_html/mapa/api/api_mostrar_marcadores.php(14): Marcadores->getMarcadores()
+#1 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/Marcadores.php on line 19

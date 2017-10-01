@@ -1,0 +1,12 @@
+[25-Sep-2017 16:16:58 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/Marcadores.php:19
+Stack trace:
+#0 /home/gruporodriguez/public_html/mapa/secciones/gestionar_marcadores.php(6): Marcadores->getMarcadores()
+#1 /home/gruporodriguez/public_html/mapa/index_mapa.php(163): include('/home/gruporodr...')
+#2 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/Marcadores.php on line 19
+[25-Sep-2017 16:17:14 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/gruporodriguez/public_html/mapa/Marcadores.php:19
+Stack trace:
+#0 /home/gruporodriguez/public_html/mapa/secciones/gestionar_marcadores.php(6): Marcadores->getMarcadores()
+#1 /home/gruporodriguez/public_html/mapa/index_mapa.php(163): include('/home/gruporodr...')
+#2 {main}
+  thrown in /home/gruporodriguez/public_html/mapa/Marcadores.php on line 19

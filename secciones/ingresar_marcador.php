@@ -17,7 +17,7 @@
         <div class="block-header bg-success">
             <h3 class="block-title" style="color:white;">Ingresar marcador</h3>
         </div>
-        <form class="js-validation-register form-horizontal push-50-t push-50" action="process/prcs_ingresar_marcador.php" method="post">
+        <form class="js-validation-register form-horizontal push-50-t push-50" id="form_ingresar" method="post">
             <div class="row">
                 <div class="form-group col-xs-12">
                     <div class="col-xs-6">
@@ -30,30 +30,28 @@
 
                     <div class="col-xs-6">
                         <div class="form-material form-material-success">
-                            <input class="form-control" type="text" id="direccion" name="direccion" placeholder="Presioná enter para ver la dirección en el mapa">
+                            <input required class="form-control" type="text" id="direccion" name="direccion" placeholder="Presioná enter para ver la dirección en el mapa">
                             <label for="direccion">Dirección</label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="form-group col-xs-12">
-                    <div class="col-xs-6">
-                        <div class="form-material floating open">
-                            <select required class="form-control" id="tipo" name="tipo" size="1">
-                                <option disabled selected value> -Seleccionar tipo- </option>
-                                <option value="proveedor">Proveedor</option>
-                                <option value="cliente">Cliente</option>
-                            </select>
-                            <label for="tipo">Tipo</label>
-                            <br>
-                        </div>
+                <div class="form-group col-xs-6">
+                    <div class="form-material floating open">
+                        <select required class="form-control" id="tipo" name="tipo" size="1">
+                            <option disabled selected value> -Seleccionar tipo- </option>
+                            <option value="proveedor">Proveedor</option>
+                            <option value="cliente">Cliente</option>
+                        </select>
+                        <label for="tipo">Tipo</label>
+                        <br>
                     </div>
-                    <div class="col-xs-6">
-                        <div class="form-material form-material-success">
-                            <input class="form-control" type="text" id="mail" name="mail" placeholder="Ingresar mail">
-                            <label for="mail">Mail</label>
-                        </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-material form-material-success">
+                        <input class="form-control" type="text" id="mail" name="mail" placeholder="Ingresar mail">
+                        <label for="mail">Mail</label>
                     </div>
                 </div>
             </div>
